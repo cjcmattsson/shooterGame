@@ -1,0 +1,41 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main.board {
+  position: relative;
+  height: 700px;
+  background-image: url('./board.png');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+.target {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 150px;
+  left: 0;
+  background-color: red;
+  animation-name: move;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 90%;
+  }
+
+  100% {
+    left: 0
+  }
+}
