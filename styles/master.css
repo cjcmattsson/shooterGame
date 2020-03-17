@@ -1,0 +1,146 @@
+.background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(133, 90, 7);
+  min-width: 1270px;
+}
+
+.background .torch {
+  height: 75px;
+  position: absolute;
+  bottom: 50px;
+}
+
+.torch.left {
+  left: 50px;
+}
+.torch.right {
+  right: 50px;
+}
+
+.text {
+  text-align: center;
+  margin: 0 auto;
+  color: var(--orange);
+}
+
+main.board {
+  position: relative;
+  border: 4px solid black;
+  cursor: url('../images/crosshair-new.png') 15 15, pointer;
+  overflow: hidden;
+  position: relative;
+  background-image: url('../images/board.png');
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.hitZone {
+  position: absolute;
+  height: 75px;
+  width: 75px;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-timing-function: linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  animation-name: fromLeft;
+  left: -100px;
+}
+
+@keyframes fromLeft {
+  0% {
+    display: block;
+    left: -100px;
+  }
+
+  100% {
+    left: calc(100% + 50px);
+    display: none;
+  }
+}
+
+.right {
+  animation-name: fromRight;
+  right: -100px;
+  transform: rotateY(180deg);
+}
+
+@keyframes fromRight {
+  0% {
+    display: block;
+    right: -100px;
+  }
+
+  100% {
+    right: calc(100% + 50px);
+    display: none;
+  }
+}
+
+.hitZone .target {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60px;
+  width: 60px;
+  animation-duration: 1s;
+  animation-timing-function: step-end;
+  animation-iteration-count: infinite;
+}
+
+.hitZone .target.dragon {
+  animation-name: dragon;
+}
+.hitZone .target.bottle {
+  background-image: url('../images/corona-bottle.png');
+  animation-name: bottle;
+  animation-duration: 0.5s;
+}
+
+@keyframes dragon {
+  0% {
+    background-image: url('../images/dragon-state-1.png');
+  }
+  17% {
+    background-image: url('../images/dragon-state-2.png');
+  }
+  34% {
+    background-image: url('../images/dragon-state-3.png');
+  }
+  53% {
+    background-image: url('../images/dragon-state-4.png');
+  }
+  70% {
+    background-image: url('../images/dragon-state-3.png');
+  }
+  87% {
+    background-image: url('../images/dragon-state-2.png');
+  }
+}
+
+@keyframes bottle {
+  0% {
+    transform: rotate(-20deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+}

@@ -1,0 +1,20 @@
+/* Colors */
+:root {
+  --beige: rgb(233, 202, 121);
+  --orange: rgb(252, 96, 61);
+  --brown: rgb(252, 96, 61);
+}
+
+.title {
+  color: var(--orange);
+  text-shadow: 2px 2px black;
+}
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--beige);
+  font-family: 'Press Start 2P', cursive;
+}

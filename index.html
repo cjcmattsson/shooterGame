@@ -3,11 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="./master.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/master.css">
+    <link rel="stylesheet" href="styles/starterMessage.css">
   </head>
   <body>
-    <main class="board"></main>
-    <h1 class="counter">0</h1>
+    <div class="background">
+      <img class="torch left" src="images/preview.gif" alt="">
+      <main class="board">
+        <div class="starter">
+          <div class="start-message">
+            <h1 class="title">Dragons & Corona</h1>
+            <p>In a time of peace in the land of Dragons, the threat of the evil Corona's are growing. Help the Dragons be free of their tormentors.
+              <br>
+              <br>
+              Shoot the Corona's down!
+              <br>
+              <br>
+              But beware: There are good guys arround aswell! We wouldnt want to shoot the good guys, would we?</p>
+            <button type="button" name="button">Start game</button>
+          </div>
+
+        </div>
+        <div class="text">
+          <h2 class="title">Score: <span class="counter">0</span></h1>
+        </div>
+      </main>
+      <img class="torch right" src="images/preview.gif" alt="">
+    </div>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
