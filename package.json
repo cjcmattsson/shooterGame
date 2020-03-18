@@ -1,0 +1,29 @@
+{
+  "name": "shootergame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"hello\"",
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjcmattsson/shooterGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjcmattsson/shooterGame/issues"
+  },
+  "homepage": "https://github.com/cjcmattsson/shooterGame#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.8.7",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "rollup": "^2.1.0",
+    "rollup-plugin-babel": "^4.4.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.7"
+  }
+}
